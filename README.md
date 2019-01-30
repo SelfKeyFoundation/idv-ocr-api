@@ -8,6 +8,7 @@ Selfkey Face Recognition API
 
 Example:
 `http://localhost:1337/v1/convert`
+
 Data:
 ```
 curl -X POST \
@@ -41,6 +42,7 @@ and the dictionary values should be the images as base64 encoded strings.
 
 Example:  
 `http://localhost:1337/v1/identity?threshold=0.4199`  
+
 Data:  
 ```
 {
