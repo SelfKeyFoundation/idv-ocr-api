@@ -37,6 +37,33 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "convert",
+			"request": {
+				"url": "{{url}}/v1/convert",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"description": "",
+							"type": "file",
+							"src": "document.jpg"
+						},
+						{
+							"key": "name",
+							"value": "selfie.jpg",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

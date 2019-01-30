@@ -6,8 +6,8 @@ declare var sails: any;
 
 export async function process(req:any, res:any, next: Function): Promise<any> {
 
-  const referenceImage = toImageDataFromBase64(req.body.document);
-  const queryImage = toImageDataFromBase64(req.body.selfie);
+  const referenceImage = toImageFromBase64(req.body.document);
+  const queryImage = toImageFromBase64(req.body.selfie);
 
   const resultsRef = await faceapi.detectAllFaces(referenceImage, faceDetectionOptions)
     .withFaceLandmarks()
@@ -47,7 +47,7 @@ export async function process(req:any, res:any, next: Function): Promise<any> {
   res.status(200).send(response);
 }
 
-function toImageDataFromBase64(string) {
+function toImageFromBase64(string) {
   var image = new canvas.Image();
   image.src = string;
   return image;

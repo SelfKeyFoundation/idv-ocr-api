@@ -39,4 +39,7 @@ module.exports.routes = {
   // identity check
   'post /v1/identity': 'IdentityController.process',
 
+  // convert image to base64
+  'post /v1/convert': 'ConvertController.process',
+
 };
