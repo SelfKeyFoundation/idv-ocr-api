@@ -39,6 +39,9 @@ module.exports.routes = {
   // identity check
   'post /v1/identity': 'IdentityController.process',
 
+  // ocr check
+  'post /v1/ocr': 'OcrController.process',
+
   // convert image to base64
   'post /v1/convert': 'ConvertController.process',
 

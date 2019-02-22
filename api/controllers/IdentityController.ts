@@ -1,8 +1,11 @@
 import * as faceapi from 'face-api.js';
-
+import * as fs from 'fs';
+import * as path from 'path';
 import { canvas, faceDetectionOptions } from '../commons';
 
 declare var sails: any;
+
+const baseDir = path.resolve(__dirname, '../../output');
 
 export async function process(req:any, res:any, next: Function): Promise<any> {
 
@@ -38,6 +41,14 @@ export async function process(req:any, res:any, next: Function): Promise<any> {
     return new faceapi.BoxWithText(res.detection.box, bestMatch.toString());
   });
 
+  const outRef = faceapi.createCanvasFromMedia(referenceImage) as any;
+  faceapi.drawDetection(outRef, refBoxesWithText);
+  saveFile('referenceImage.jpg', outRef.toBuffer('image/jpeg'));
+
+  const outQuery = faceapi.createCanvasFromMedia(queryImage) as any;
+  faceapi.drawDetection(outQuery, queryBoxesWithText);
+  saveFile('queryImage.jpg', outQuery.toBuffer('image/jpeg'));
+
   let response = {
     document: refBoxesWithText,
     selfie: queryBoxesWithText,
@@ -52,3 +63,11 @@ function toImageFromBase64(string) {
   image.src = string;
   return image;
 };
+
+function saveFile(fileName: string, buf: Buffer) {
+  if (!fs.existsSync(baseDir)) {
+    fs.mkdirSync(baseDir);
+  }
+  console.log(baseDir);
+  fs.writeFileSync(path.resolve(baseDir, fileName), buf);
+}
