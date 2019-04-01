@@ -15,13 +15,14 @@
     "canvas": "^2.3.1",
     "canvas-base64": "^1.0.0",
     "face-api.js": "^0.18.0",
-    "grunt": "1.0.1",
+    "grunt": "1.0.4",
     "sails": "^1.1.0",
     "sails-hook-grunt": "^3.1.0",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^1.5.5",
     "ts-node": "^8.0.2",
-    "typescript": "^3.2.4"
+    "typescript": "^3.2.4",
+    "snyk": "^1.145.0"
   },
   "devDependencies": {
     "@sailshq/eslint": "^4.19.3"
@@ -30,7 +31,9 @@
     "start": "NODE_ENV=production node app.js",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
-    "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "main": "app.js",
   "repository": {
@@ -41,5 +44,6 @@
   "license": "",
   "engines": {
     "node": "^8.11"
-  }
+  },
+  "snyk": true
 }
