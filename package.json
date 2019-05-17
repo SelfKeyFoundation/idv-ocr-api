@@ -16,7 +16,7 @@
     "canvas-base64": "^1.0.0",
     "face-api.js": "^0.18.0",
     "grunt": "1.0.4",
-    "sails": "^1.1.0",
+    "sails": "^1.2.2",
     "sails-hook-grunt": "^3.1.0",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^1.5.5",
