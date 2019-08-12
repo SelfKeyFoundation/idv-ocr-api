@@ -60,7 +60,6 @@ patch:
         patched: '2019-04-01T14:29:29.168Z'
     - sails-hook-grunt > grunt-contrib-watch > tiny-lr > body-parser > debug > ms:
         patched: '2019-04-01T14:29:29.168Z'
-  SNYK-JS-LODASH-450202:
     - sails-hook-grunt > babel-preset-env > babel-plugin-transform-es2015-modules-amd > babel-plugin-transform-es2015-modules-commonjs > babel-types > lodash:
         patched: '2019-08-12T22:20:58.969Z'
     - sails-hook-grunt > grunt-sync > lodash:
@@ -375,3 +374,33 @@ patch:
         patched: '2019-08-12T22:20:58.969Z'
     - sails-hook-grunt > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > babel-helper-function-name > babel-template > babel-traverse > babel-types > lodash:
         patched: '2019-08-12T22:20:58.969Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - grunt > grunt-legacy-util > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - grunt > grunt-legacy-log > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails-hook-sockets > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails-hook-orm > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails > skipper > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails > sails-generate > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails-hook-orm > sails-disk > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails > machinepack-redis > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails-hook-orm > waterline-utils > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails-hook-orm > waterline > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails-hook-sockets > machinepack-redis > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails-hook-orm > waterline > encrypted-attr > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
+    - sails-hook-orm > waterline > waterline-utils > async > lodash:
+        patched: '2019-07-04T02:49:45.250Z'
