@@ -6,7 +6,7 @@
   "keywords": [],
   "dependencies": {
     "@sailshq/connect-redis": "^3.2.1",
-    "@sailshq/lodash": "^3.10.3",
+    "@sailshq/lodash": "^3.10.4",
     "@sailshq/socket.io-redis": "^5.2.0",
     "@tensorflow/tfjs-node": "^0.2.3",
     "@types/express": "^4.16.1",
