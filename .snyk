@@ -422,3 +422,10 @@ patch:
         patched: '2019-08-12T22:22:19.345Z'
     - snyk > @snyk/dep-graph > graphlib > lodash:
         patched: '2019-08-12T22:22:19.345Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - '@tensorflow/tfjs-node > https-proxy-agent':
+        patched: '2019-10-04T02:50:34.163Z'
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T02:50:34.163Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T02:50:34.163Z'
