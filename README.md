@@ -1,5 +1,5 @@
 # face-rec
-Selfkey Face Recognition API
+Selfkey Identity Verification and OCR Passport Extration API
 
 ## Endpoints
 1) Health: a health check at `/v1/health` should return `200` [GET].
@@ -64,10 +64,39 @@ Response:
 }
 ```
 
+4) OCR: passport text extraction at `/api/ocr` [POST].
+
+Upload a passport image (jpg or png) as the `body` content.
+
+This endpoint accepts 2 images, tries to find a face in each image, and
+based on the similarity threshold supplied will determine if the faces in
+the images are the same.
+
+`POST`ed data should be a json dictionary with 2 entries. The keys provided
+will be used in the response to indicate if a face was found in the image,
+and the dictionary values should be the images as base64 encoded strings.
+
+Example:  
+`http://localhost:1337/v1/ocr`  
+
+Data:  
+```
+{
+  "passport": jpg or png image
+}
+```
+Response:
+```
+{
+  "response": "LR Assinatura do titular / ighature du titulsire Lol = Bearer's signatuire / Fiuma: del titular R N = & K e 1% 13 = 2 Este passaporte deve serassinado pelo fiuler, !::’ 2o == salvo em caso de incapacidade. i = > v‘ _ Ce posseport dott 2ire saré o e titukare, : -l . sauf en cas ofi INCAPAGIHE, 3 o< u_ B This passport must be signed, e T —— exazpt where the bearer is inable to do s 5 - e Este pasaporte debe sexfirmade porel tukr, -« s siver 5 salvo en caso de inéapacidad W A" ""iﬁ""%?f"“ FEDERATIVA DO BRASIL e : PASSAPORTE P BRA FLat1S73 | PASSPORT § .,.! m’ T W.UGNQ\‘M»OURA VESGEIRL T vq,, S5 EDUARDO X i NACIONALIDADE / NATIONALITY o BRASILEIRO(A) - B DATADE NASCIMENTO / DATE OF BIRTH. DENTIDADE N * / PERSONAL Ne. R 29/Decl1984 ol — SEXO /86X % NATURALIDADE 7 PLACE OF BIRTH v N : . ™ RECIFE/PE i = T DATADE EXPEDICAQ / DATE OF ISSUE AUTORDADE { AUTHORTY"
+}
+```
+
 ## Development
 ### Prerequisites
 - Sails JS (https://sailsjs.com/)
 - Face API JS (https://github.com/justadudewhohacks/face-api.js)
+- Tesseract JS (https://tesseract.projectnaptha.com/)
 
 ### Build
 `npm install` will build and install required libraries.
@@ -77,13 +106,23 @@ Response:
 
 ## Testing
 ### Benchmarking and evaluating
-#todo
+- Extended Trained Model
+Tokensale Dataset
+39,860 different persons
+72,225 images
+Built a passport specialist classifier
+- Strategy
+Classifier combination
 
-### Generating Testing and Validation Data
-#todo
+- Evaluation
+10 Fold Cross Validation
+Final Accuracy: 96.57%
+
+## Status Report
+### Please check docs/Biometrics Project Status Report.pdf
 
 ## Deploy
-#todo
+- Google Cloud (https://console.cloud.google.com/compute/instancesDetail/zones/us-east1-b/instances/face-rec-api-dev?project=selfkey2)
 
 ## Contributing
 See the [contributing notes](CONTRIBUTING.md).  
