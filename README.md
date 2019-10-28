@@ -99,12 +99,12 @@ Response:
 ## Testing
 ### Benchmarking and evaluating
 - Extended Trained Model
-Tokensale Dataset
-39,860 different persons
-72,225 images
-Built a passport specialist classifier
+- Tokensale Dataset
+- 39,860 different persons
+- 72,225 images
+- Built a passport specialist classifier
 - Strategy
-Classifier combination
+- Classifier combination
 
 - Evaluation
 10 Fold Cross Validation
