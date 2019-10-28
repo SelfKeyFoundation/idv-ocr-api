@@ -1,8 +1,8 @@
 {
-  "name": "face-rec",
+  "name": "idv-ocr-api",
   "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
+  "version": "1.0.0",
+  "description": "Selfkey Identity Verification and OCR Passport Extration API",
   "keywords": [],
   "dependencies": {
     "@sailshq/connect-redis": "^3.2.1",
@@ -38,10 +38,10 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/face-similarity.git"
+    "url": "https://github.com/SelfKeyFoundation/idv-ocr-api"
   },
-  "author": "anonymous node/sails user",
-  "license": "",
+  "author": "eduardosmoura",
+  "license": "MIT",
   "engines": {
     "node": "^8.11"
   },
