@@ -1,4 +1,4 @@
-# face-rec
+# idv-ocr-api
 Selfkey Identity Verification and OCR Passport Extration API
 
 ## Endpoints
@@ -67,14 +67,6 @@ Response:
 4) OCR: passport text extraction at `/api/ocr` [POST].
 
 Upload a passport image (jpg or png) as the `body` content.
-
-This endpoint accepts 2 images, tries to find a face in each image, and
-based on the similarity threshold supplied will determine if the faces in
-the images are the same.
-
-`POST`ed data should be a json dictionary with 2 entries. The keys provided
-will be used in the response to indicate if a face was found in the image,
-and the dictionary values should be the images as base64 encoded strings.
 
 Example:  
 `http://localhost:1337/v1/ocr`  
