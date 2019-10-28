@@ -111,7 +111,7 @@ Classifier combination
 Final Accuracy: 96.57%
 
 ## Status Report
-### Please check docs/Biometrics Project Status Report.pdf
+Please check [status report](docs/Biometrics Project Status Report.pdf)
 
 ## Deploy
 - Google Cloud (https://console.cloud.google.com/compute/instancesDetail/zones/us-east1-b/instances/face-rec-api-dev?project=selfkey2)
