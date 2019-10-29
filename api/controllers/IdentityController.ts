@@ -41,18 +41,24 @@ export async function process(req:any, res:any, next: Function): Promise<any> {
     return new faceapi.BoxWithText(res.detection.box, bestMatch.toString());
   });
 
+  let prefix = 'data:image/jpeg;base64,';
+
   const outRef = faceapi.createCanvasFromMedia(referenceImage) as any;
   faceapi.drawDetection(outRef, refBoxesWithText);
-  saveFile('referenceImage.jpg', outRef.toBuffer('image/jpeg'));
+  let outRefBase64 = outRef.toBuffer('image/jpeg').toString('base64');
+  // saveFile('referenceImage.jpg', outRef.toBuffer('image/jpeg'));
 
   const outQuery = faceapi.createCanvasFromMedia(queryImage) as any;
   faceapi.drawDetection(outQuery, queryBoxesWithText);
-  saveFile('queryImage.jpg', outQuery.toBuffer('image/jpeg'));
+  let outQueryBase64 = outQuery.toBuffer('image/jpeg').toString('base64');
+  // saveFile('queryImage.jpg', outQuery.toBuffer('image/jpeg'));
 
   let response = {
     document: refBoxesWithText,
     selfie: queryBoxesWithText,
-    identity: results
+    identity: results,
+    outDocument: prefix + outRefBase64,
+    outSelfie: prefix + outQueryBase64
   };
 
   res.status(200).send(response);
