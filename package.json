@@ -21,7 +21,7 @@
     "sails-hook-grunt": "^4.0.0",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^2.0.0",
-    "snyk": "^1.230.5",
+    "snyk": "^1.239.3",
     "ts-node": "^8.0.2",
     "typescript": "^3.2.4"
   },
