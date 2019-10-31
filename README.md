@@ -112,6 +112,7 @@ Response:
 ### Prerequisites
 - Sails JS (https://sailsjs.com/)
 - Face API JS (https://github.com/justadudewhohacks/face-api.js)
+- TensorFlow JS (https://github.com/tensorflow/tfjs) 
 - Tesseract JS (https://tesseract.projectnaptha.com/)
 
 ### Build
