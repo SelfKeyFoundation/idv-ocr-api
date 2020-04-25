@@ -17,7 +17,7 @@
     "face-api.js": "^0.18.0",
     "grunt": "1.0.4",
     "node-tesseract-ocr": "^1.0.0",
-    "sails": "^1.2.2",
+    "sails": "^1.2.4",
     "sails-hook-grunt": "^4.0.0",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^2.0.0",
